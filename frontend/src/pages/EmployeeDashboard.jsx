@@ -25,14 +25,20 @@ function EmployeeDashboard() {
     try {
 
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/goals"
+        `${import.meta.env.VITE_API_URL}/api/goals`
       );
 
-      setGoals(res.data);
+      setGoals(
+        Array.isArray(res.data)
+          ? res.data
+          : []
+      );
 
     } catch (error) {
 
       console.log(error);
+
+      setGoals([]);
 
     }
 
@@ -92,7 +98,7 @@ function EmployeeDashboard() {
     try {
 
       await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/goals/create",
+        `${import.meta.env.VITE_API_URL}/api/goals/create`,
         {
           employeeEmail: "employee@test.com",
           title,
@@ -170,8 +176,6 @@ function EmployeeDashboard() {
         <Navbar />
 
         <div className="max-w-5xl mx-auto">
-
-          {/* FORM */}
 
           <div className="bg-[#111111] border border-white/10 p-8 rounded-3xl shadow-lg">
 
@@ -262,8 +266,6 @@ function EmployeeDashboard() {
 
           </div>
 
-          {/* GOALS */}
-
           <div className="mt-10">
 
             <h2 className="text-3xl font-bold mb-6">
@@ -273,6 +275,7 @@ function EmployeeDashboard() {
             </h2>
 
             {
+              Array.isArray(goals) &&
               goals.map((goal) => (
 
                 <div
@@ -305,8 +308,6 @@ function EmployeeDashboard() {
                     <p>
                       UOM: {goal.uom}
                     </p>
-
-                    {/* PROGRESS */}
 
                     <div className="mt-5">
 
