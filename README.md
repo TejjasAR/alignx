@@ -204,25 +204,26 @@ Use:
 
 ## Login Page
 
-![Login](./screenshots/login.png)
+![Login](frontend/public/screenshots/login.png)
 
 ---
 
 ## Signup Page
 
-![Signup](./screenshots/signup.png)
+![Signup](frontend/public/screenshots/sign up.png)
 
 ---
 
 ## Employee Dashboard
 
-![Employee Dashboard](./screenshots/employee.png)
+![Employee Dashboard](frontend/public/screenshots/employee_dashboard-1.png)
+![Employee Dashboard](frontend/public/screenshots/employee_dashboard-2.png)
 
 ---
 
 ## Manager Dashboard
 
-![Manager Dashboard](./screenshots/manager.png)
+![Manager Dashboard](frontend/public/screenshots/manager_dashboard.png)
 
 ---
 
