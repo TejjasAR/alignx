@@ -7,7 +7,14 @@ const authRoutes = require("./routes/authRoutes");
 const goalRoutes = require("./routes/goalRoutes");
 const app = express();
 
-app.use(cors());
+const cors = require("cors");
+
+app.use(
+    cors({
+        origin: "https://alignx1.vercel.app",
+        credentials: true
+    })
+);
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/goals", goalRoutes);
