@@ -228,7 +228,7 @@ Use:
 
 ## Admin Dashboard
 
-![Admin Dashboard](./screenshots/admin.png)
+![Admin Dashboard](frontend/public/screenshots/admin_dshboard.png)
 
 ---
 
