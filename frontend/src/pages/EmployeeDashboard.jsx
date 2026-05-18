@@ -25,7 +25,7 @@ function EmployeeDashboard() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/goals"
+        "${import.meta.env.VITE_API_URL}/api/goals"
       );
 
       setGoals(res.data);
@@ -92,7 +92,7 @@ function EmployeeDashboard() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/goals/create",
+        "${import.meta.env.VITE_API_URL}/api/goals/create",
         {
           employeeEmail: "employee@test.com",
           title,
@@ -140,7 +140,7 @@ function EmployeeDashboard() {
     try {
 
       await axios.put(
-        `http://localhost:5000/api/goals/update/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/goals/update/${id}`,
         {
           achievement,
           status
@@ -254,8 +254,8 @@ function EmployeeDashboard() {
 
               {
                 loading
-                ? "Creating Goal..."
-                : "Create Goal"
+                  ? "Creating Goal..."
+                  : "Create Goal"
               }
 
             </button>

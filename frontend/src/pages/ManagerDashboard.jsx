@@ -19,7 +19,7 @@ function ManagerDashboard() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/goals"
+        "${import.meta.env.VITE_API_URL}/api/goals"
       );
 
       setGoals(res.data);
@@ -39,7 +39,7 @@ function ManagerDashboard() {
     try {
 
       await axios.put(
-        `http://localhost:5000/api/goals/approve/${id}`
+        `${import.meta.env.VITE_API_URL}/api/goals/approve/${id}`
       );
 
       alert("Goal Approved");
@@ -252,8 +252,8 @@ function ManagerDashboard() {
 
                       {
                         loadingId === goal._id
-                        ? "Approving..."
-                        : "Approve Goal"
+                          ? "Approving..."
+                          : "Approve Goal"
                       }
 
                     </button>
