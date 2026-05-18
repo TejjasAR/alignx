@@ -26,29 +26,41 @@ function AdminDashboard() {
     try {
 
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/goals"
+        `${import.meta.env.VITE_API_URL}/api/goals`
       );
 
-      setGoals(res.data);
+      setGoals(
+        Array.isArray(res.data)
+          ? res.data
+          : []
+      );
 
     } catch (error) {
 
       console.log(error);
 
+      setGoals([]);
+
     }
 
   };
 
-  const approvedGoals = goals.filter(
-    (goal) => goal.approved
-  ).length;
+  const approvedGoals = Array.isArray(goals)
+    ? goals.filter(
+        (goal) => goal.approved
+      ).length
+    : 0;
 
   const pendingGoals =
-    goals.length - approvedGoals;
+    Array.isArray(goals)
+      ? goals.length - approvedGoals
+      : 0;
 
-  const completedGoals = goals.filter(
-    (goal) => goal.status === "Completed"
-  ).length;
+  const completedGoals = Array.isArray(goals)
+    ? goals.filter(
+        (goal) => goal.status === "Completed"
+      ).length
+    : 0;
 
   const data = [
     {
@@ -83,8 +95,6 @@ function AdminDashboard() {
 
         <div className="max-w-7xl mx-auto">
 
-          {/* HEADER */}
-
           <div className="mb-10">
 
             <h1 className="text-5xl font-bold tracking-tight text-white">
@@ -101,11 +111,7 @@ function AdminDashboard() {
 
           </div>
 
-          {/* STATS */}
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-
-            {/* TOTAL */}
 
             <div className="bg-[#111111] border border-white/10 p-8 rounded-3xl shadow-lg">
 
@@ -123,8 +129,6 @@ function AdminDashboard() {
 
             </div>
 
-            {/* APPROVED */}
-
             <div className="bg-[#111111] border border-white/10 p-8 rounded-3xl shadow-lg">
 
               <h2 className="text-gray-400 text-sm font-medium uppercase tracking-wider">
@@ -140,8 +144,6 @@ function AdminDashboard() {
               </p>
 
             </div>
-
-            {/* PENDING */}
 
             <div className="bg-[#111111] border border-white/10 p-8 rounded-3xl shadow-lg">
 
@@ -160,8 +162,6 @@ function AdminDashboard() {
             </div>
 
           </div>
-
-          {/* CHART */}
 
           <div className="bg-[#111111] border border-white/10 p-10 rounded-3xl shadow-lg flex justify-center">
 

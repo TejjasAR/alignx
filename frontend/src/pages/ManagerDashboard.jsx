@@ -19,14 +19,20 @@ function ManagerDashboard() {
     try {
 
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/goals"
+        `${import.meta.env.VITE_API_URL}/api/goals`
       );
 
-      setGoals(res.data);
+      setGoals(
+        Array.isArray(res.data)
+          ? res.data
+          : []
+      );
 
     } catch (error) {
 
       console.log(error);
+
+      setGoals([]);
 
     }
 
@@ -83,14 +89,13 @@ function ManagerDashboard() {
           </p>
 
           {
+            Array.isArray(goals) &&
             goals.map((goal) => (
 
               <div
                 key={goal._id}
                 className="bg-[#111111] border border-white/10 p-8 rounded-3xl mb-6 shadow-lg"
               >
-
-                {/* HEADER */}
 
                 <div className="flex justify-between items-start">
 
@@ -135,8 +140,6 @@ function ManagerDashboard() {
                   </div>
 
                 </div>
-
-                {/* DETAILS */}
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-8">
 
@@ -206,8 +209,6 @@ function ManagerDashboard() {
 
                 </div>
 
-                {/* PROGRESS */}
-
                 <div className="mt-6 bg-[#1A1A1A] border border-white/5 p-5 rounded-2xl">
 
                   <div className="flex justify-between mb-3">
@@ -238,8 +239,6 @@ function ManagerDashboard() {
                   </div>
 
                 </div>
-
-                {/* BUTTON */}
 
                 {
                   !goal.approved && (
