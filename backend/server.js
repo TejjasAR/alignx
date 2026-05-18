@@ -5,9 +5,8 @@ require("dotenv").config();
 
 const authRoutes = require("./routes/authRoutes");
 const goalRoutes = require("./routes/goalRoutes");
-const app = express();
 
-const cors = require("cors");
+const app = express();
 
 app.use(
     cors({
@@ -15,9 +14,12 @@ app.use(
         credentials: true
     })
 );
+
 app.use(express.json());
+
 app.use("/api/auth", authRoutes);
 app.use("/api/goals", goalRoutes);
+
 app.get("/", (req, res) => {
     res.send("API Running");
 });
