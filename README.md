@@ -210,7 +210,7 @@ Use:
 
 ## Signup Page
 
-![Signup](frontend/public/screenshots/sign up.png)
+![Signup](frontend/public/screenshots/signup.png)
 
 ---
 
