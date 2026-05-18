@@ -14,14 +14,15 @@ function Login() {
 
     try {
 
-      const res = await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/auth/login",
+      await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/auth/register`,
         {
+          name,
           email,
-          password
+          password,
+          role
         }
       );
-
       localStorage.setItem(
         "token",
         res.data.token
