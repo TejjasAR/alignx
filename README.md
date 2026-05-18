@@ -4,103 +4,94 @@ Enterprise Performance Management Platform built for modern organizations.
 
 ---
 
-## 🚀 Overview
+## Overview
 
-AlignX is a role-based performance management platform where employees can create goals, managers can review and approve them, and admins can monitor analytics and organizational performance.
+AlignX is a role-based performance management platform where employees can create goals, managers can review and approve them, and administrators can monitor analytics and organizational performance.
 
-The platform was designed with a modern enterprise workflow in mind using a sleek dark UI inspired by premium SaaS dashboards.
-
----
-
-# ✨ Features
-
-## 🔐 Authentication System
-
-* Secure Login & Signup
-* Role-based access control
-* JWT Authentication
-* Persistent sessions using Local Storage
+The platform is designed with a modern enterprise workflow using a sleek dark UI inspired by premium SaaS dashboards.
 
 ---
 
-## 👨‍💼 Employee Dashboard
+# Features
 
-* Create performance goals
-* Set target, weightage, and UOM
-* Update achievement progress
-* Track goal completion status
-* Progress bar visualization
-* Goal validation rules
+## Authentication System
+- Secure Login and Signup
+- Role-based Access Control
+- JWT Authentication
+- Persistent Sessions using Local Storage
+
+---
+
+## Employee Dashboard
+- Create performance goals
+- Set target, weightage, and unit of measurement
+- Update achievement progress
+- Track goal completion status
+- Visual progress tracking with progress bars
+- Goal validation rules
 
 ### Validation Rules
-
-* Maximum 8 goals allowed
-* Total weightage cannot exceed 100%
-* Minimum goal weightage is 10%
-* Negative targets are restricted
-
----
-
-## 👔 Manager Dashboard
-
-* Review employee goals
-* Approve performance goals
-* Track employee achievements
-* Progress visualization
-* Real-time approval updates
+- Maximum 8 goals allowed
+- Total weightage cannot exceed 100%
+- Minimum goal weightage is 10%
+- Negative targets are restricted
 
 ---
 
-## 📊 Admin Dashboard
-
-* Organizational analytics
-* Goal statistics overview
-* Pie chart visualization
-* Approved vs Pending tracking
-* Enterprise monitoring dashboard
+## Manager Dashboard
+- Review employee goals
+- Approve performance goals
+- Monitor employee achievements
+- Track progress visually
+- Real-time approval updates
 
 ---
 
-# 🛠️ Tech Stack
+## Admin Dashboard
+- Organizational analytics overview
+- Goal statistics monitoring
+- Pie chart visualizations
+- Approved vs Pending tracking
+- Enterprise-level monitoring dashboard
+
+---
+
+# Tech Stack
 
 ## Frontend
-
-* React.js
-* Tailwind CSS
-* Axios
-* React Router DOM
-* Recharts
+- React.js
+- Tailwind CSS
+- Axios
+- React Router DOM
+- Recharts
 
 ## Backend
-
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* JWT Authentication
-* bcrypt.js
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- bcrypt.js
 
 ## Deployment
-
-* Frontend: Vercel
-* Backend: Render
-* Database: MongoDB Atlas
-
----
-
-# 🎨 UI Design
-
-The UI follows:
-
-* Dark enterprise theme
-* Atomberg-inspired premium aesthetics
-* Modern glassmorphism styling
-* Responsive layouts
-* Minimal and sleek dashboard design
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
 
 ---
 
-# 📂 Project Structure
+# UI Design
+
+The application follows:
+- Dark enterprise theme
+- Minimal and modern design system
+- Responsive layouts
+- Premium dashboard aesthetics
+- Glassmorphism-inspired interface
+
+---
+
+# Project Structure
 
 ```bash
 alignx/
@@ -109,6 +100,7 @@ alignx/
 │   ├── src/
 │   │   ├── components/
 │   │   ├── pages/
+│   │   ├── assets/
 │   │   ├── App.jsx
 │   │   └── main.jsx
 │
@@ -119,14 +111,16 @@ alignx/
 │   ├── server.js
 │   └── .env
 │
+├── screenshots/
+│
 └── README.md
-```
+````
 
 ---
 
-# ⚙️ Installation
+# Installation
 
-## 1️⃣ Clone Repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/TejjasAR/alignx.git
@@ -134,7 +128,7 @@ git clone https://github.com/TejjasAR/alignx.git
 
 ---
 
-## 2️⃣ Install Frontend Dependencies
+## 2. Install Frontend Dependencies
 
 ```bash
 cd frontend
@@ -143,7 +137,7 @@ npm install
 
 ---
 
-## 3️⃣ Install Backend Dependencies
+## 3. Install Backend Dependencies
 
 ```bash
 cd backend
@@ -152,9 +146,9 @@ npm install
 
 ---
 
-# 🔑 Environment Variables
+# Environment Variables
 
-Create a `.env` file inside backend folder.
+Create a `.env` file inside the backend folder.
 
 ```env
 MONGO_URI=your_mongodb_connection
@@ -164,7 +158,7 @@ PORT=5000
 
 ---
 
-# ▶️ Run Project
+# Run Project
 
 ## Start Backend
 
@@ -184,7 +178,7 @@ npm run dev
 
 ---
 
-# 🌐 Deployment
+# Deployment
 
 ## Frontend
 
@@ -206,32 +200,52 @@ Use:
 
 ---
 
-# 📸 Screenshots
+# Screenshots
 
-Add screenshots of:
+## Login Page
 
-* Login Page
-* Signup Page
-* Employee Dashboard
-* Manager Dashboard
-* Admin Dashboard
+![Login](./screenshots/login.png)
 
 ---
 
-# 🔥 Future Improvements
+## Signup Page
+
+![Signup](./screenshots/signup.png)
+
+---
+
+## Employee Dashboard
+
+![Employee Dashboard](./screenshots/employee.png)
+
+---
+
+## Manager Dashboard
+
+![Manager Dashboard](./screenshots/manager.png)
+
+---
+
+## Admin Dashboard
+
+![Admin Dashboard](./screenshots/admin.png)
+
+---
+
+# Future Improvements
 
 * Email notifications
 * KPI scoring system
-* Team performance insights
-* PDF report generation
 * AI-based performance analytics
 * Notification system
+* PDF report generation
 * Goal deadline tracking
+* Team performance insights
 * Employee leaderboard
 
 ---
 
-# 👨‍💻 Developed By
+# Developed By
 
 ## Tejjas A R
 
@@ -242,6 +256,9 @@ GitHub:
 
 ---
 
-# ⭐ If you liked this project
+# Support
 
-Give this repository a star on GitHub ⭐
+If you found this project useful, consider giving the repository a star on GitHub.
+
+```
+```
